@@ -1,0 +1,104 @@
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            padding: 0;
+            margin: 0;
+        }
+
+        nav {
+            background-color: #ccc;
+            padding: 10px;
+            margin: 5px;
+            border-radius: 8px;
+            box-shadow: 10px 10px 10px gray;
+        }
+
+        ul {
+            padding: 0;
+            margin: 0;
+        }
+        li {
+            display: inline-block;
+            border-right: 1px solid;
+            /*border: 1px solid black;*/
+            
+        }
+        li:hover {
+            color: white;
+            transition-duration: .5s;
+            transform: scale(1.2);
+        }
+
+        a {
+            color: black;
+            padding: 5px 10px;
+            text-decoration: none;
+        }
+        
+        a:hover {
+            color: lightslategrey;
+        }
+
+        #menu-button {
+            display: none;
+        }
+
+        #menu-button + label {
+            display: none;
+        }
+
+
+
+        button:hover {
+
+            transform: scaleX(2);
+            background-color: blueviolet;
+            color: white;
+            transition-duration: 2s;
+
+
+
+        }
+        
+        @media screen and (max-width: 480px) {
+            nav {
+                background-color:bisque;
+                width: 70%;
+                height: 92vh;
+
+            }
+
+            li {
+                display: block;
+                border-right: none;
+                padding: 8px 0;
+                
+            }
+
+            li:hover {
+                transition-duration: .5s;
+                transform: scale(1.05);
+            }
+
+            #menu-button {
+                position: absolute;
+                right: 10px;
+            }
+
+            #menu-button:checked ~ nav {
+                translate: -100% 0;
+                transition-duration: .5s;
+            }
+
+            input[type="checkbox"] {
+                display: none;
+            }
+
+            input[type="checkbox"] + label {
+                display: block !important;
+                position: absolute;
+                right: 10px;
+            }
+        }
+
+     
